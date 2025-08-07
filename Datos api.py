@@ -1,7 +1,7 @@
 import requests
-from departamento import Departamento
-from artista import Artista
-from obra import Obra
+from departamento import departamento
+from artista import artista
+from obra import obra
 
 """Obtiene la lista de departamentos desde la API del Museo Metropolitano"""
 
@@ -96,4 +96,5 @@ def obtener_obras_por_autor(obras, nombre_autor):
     for obra in obras:
         if nombre_autor.lower() in obra.artista.nombre.lower():
             obras_filtradas.append(obra)
+
     return obras_filtradas
